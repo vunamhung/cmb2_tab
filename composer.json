@@ -4,7 +4,7 @@
   "keywords": [
     "wordpress",
     "cmb2",
-    "cmb2 tab"
+    "cmb2_tab"
   ],
   "homepage": "https://github.com/vunamhung/cmb2_tab",
   "license": "GPL-3.0+",
@@ -28,7 +28,7 @@
   },
   "autoload": {
     "files": [
-      "tab.php"
+      "Tab.php"
     ]
   }
 }
