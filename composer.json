@@ -1,7 +1,11 @@
 {
   "name": "vunamhung/cmb2_tab",
   "description": "This is a CMB2 Extension repository which help modify the default behavior of CMB2 and extends it's functionality.",
-  "keywords": ["wordpress", "cmb2_tab", "metabox", "cmb2"],
+  "keywords": [
+    "wordpress",
+    "cmb2",
+    "cmb2 tab"
+  ],
   "homepage": "https://github.com/vunamhung/cmb2_tab",
   "license": "GPL-3.0+",
   "support": {
@@ -23,6 +27,8 @@
     "composer/installers": "~1.0"
   },
   "autoload": {
-    "files": ["tab.php"]
+    "files": [
+      "tab.php"
+    ]
   }
 }
