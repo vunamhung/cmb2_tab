@@ -1,6 +1,6 @@
 <?php
 
-namespace vunamhung\cmb2;
+namespace vnh\cmb2;
 
 class Tab {
 	public function __construct() {
@@ -11,16 +11,16 @@ class Tab {
 		add_action('cmb2_after_form', [$this, 'after_form'], 10, 4);
 	}
 
-    public function enqueue() {
-        wp_enqueue_style('cmb-tabs', $this->dir_url('css/tabs.css'), [], '1.0.0');
-        wp_enqueue_script('cmb-tabs', $this->dir_url('js/tabs.js'), ['jquery'], '1.0.0', true);
-    }
+	public function enqueue() {
+		wp_enqueue_style('cmb-tabs', $this->dir_url('css/tabs.css'), [], '1.0.0');
+		wp_enqueue_script('cmb-tabs', $this->dir_url('js/tabs.js'), ['jquery'], '1.0.0', true);
+	}
 
-    public function setup_dark_mode() {
-        wp_enqueue_style('cmb-tabs-dark-mode', $this->dir_url('css/dark-mode.css'), [], '1.0.0');
-    }
+	public function setup_dark_mode() {
+		wp_enqueue_style('cmb-tabs-dark-mode', $this->dir_url('css/dark-mode.css'), [], '1.0.0');
+	}
 
-    public function before_form($cmb_id, $object_id, $object_type, \CMB2 $cmb) {
+	public function before_form($cmb_id, $object_id, $object_type, \CMB2 $cmb) {
 		if ($cmb->prop('tabs') && is_array($cmb->prop('tabs'))):
 			$html = sprintf(
 				'<div class="cmb-tabs-wrap cmb-tabs-%s"><div class="cmb-tabs">',
@@ -54,11 +54,11 @@ class Tab {
 
 			$html .= '</div>';
 
-			echo $html; //phpcs:disable
+			echo $html;
 		endif;
 	}
 
-    public function after_form($cmb_id, $object_id, $object_type, \CMB2 $cmb) {
+	public function after_form($cmb_id, $object_id, $object_type, \CMB2 $cmb) {
 		if ($cmb->prop('tabs') && is_array($cmb->prop('tabs'))):
 			echo '</div>';
 		endif;

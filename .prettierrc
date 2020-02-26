@@ -1,0 +1,7 @@
+{
+	"printWidth": 145,
+	"useTabs": true,
+	"braceStyle": "1tbs",
+	"trailingComma": "all",
+	"trailingCommaPHP": "php7.2"
+}
